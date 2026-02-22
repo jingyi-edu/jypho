@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2022年景颐市物理竞赛初赛成绩查询</title>
+
+<style>
+body{
+    font-family: SimSun, serif;
+    background:#f5fbfa;
+    margin:60px;
+}
+
+h1{
+    color:#006666;
+}
+
+.box{
+    margin-top:30px;
+}
+
+input{
+    padding:8px;
+    width:200px;
+    font-size:16px;
+}
+
+button{
+    padding:8px 15px;
+    font-size:16px;
+    background:#008080;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:25px;
+    font-size:18px;
+    color:#333;
+}
+</style>
+
+<script>
+function searchScore(){
+    var name = document.getElementById("name").value.trim();
+    var result = document.getElementById("result");
+
+    if(name === "陈嘉琅"){
+        result.innerHTML = "姓名：陈嘉琅<br>初赛成绩：204 分<br>状态：已晋级复赛";
+    }
+    else if(name === "楚盈盈"){
+        result.innerHTML = "姓名：楚盈盈<br>初赛成绩：207 分<br>状态：已晋级复赛";
+    }
+    else{
+        result.innerHTML = "未查询到该考生信息，请核对姓名。";
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>2022年景颐市中学生物理竞赛初赛成绩查询</h1>
+
+<div class="box">
+请输入姓名：
+<input type="text" id="name">
+<button onclick="searchScore()">查询</button>
+
+<div class="result" id="result"></div>
+</div>
+
+</body>
+</html>
