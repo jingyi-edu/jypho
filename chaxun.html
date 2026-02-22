@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>成绩查询 - 景颐市物理竞赛委员会</title>
+
+<style>
+body{
+    font-family: "SimSun", serif;
+    background-color:#e8f5f2;
+    margin:0;
+}
+.container{
+    width:900px;
+    margin:40px auto;
+    background:#ffffff;
+    padding:40px;
+}
+.header{
+    text-align:center;
+    border-bottom:2px solid #2f8f83;
+    padding-bottom:15px;
+}
+.header h1{
+    color:#1f5c57;
+}
+.nav{
+    text-align:center;
+    margin:20px 0;
+}
+.nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:#1f5c57;
+}
+.query-box{
+    margin-top:40px;
+    text-align:center;
+}
+input{
+    padding:8px;
+    width:200px;
+    font-size:16px;
+}
+button{
+    padding:8px 15px;
+    background:#2f8f83;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+.result{
+    margin-top:30px;
+    font-size:18px;
+    text-align:center;
+    line-height:1.8;
+}
+.footer{
+    margin-top:60px;
+    text-align:center;
+    font-size:12px;
+    color:#666;
+}
+</style>
+
+<script>
+function searchResult(){
+    var name = document.getElementById("name").value.trim();
+    var result = document.getElementById("result");
+
+    if(name === "陈嘉琅"){
+        result.innerHTML = "姓名：陈嘉琅<br>排名：第23名<br>奖项：金牌（国家集训队）";
+    }
+    else if(name === "楚盈盈"){
+        result.innerHTML = "姓名：楚盈盈<br>排名：第49名<br>奖项：金牌（国家集训队）";
+    }
+    else if(name === "路向征"){
+        result.innerHTML = "姓名：路向征<br>排名：第151名<br>奖项：金牌";
+    }
+    else if(name === "林歆炡" || name === "骆黛" || name === "沈誉泽"){
+        result.innerHTML = "姓名：" + name + "<br>奖项：银牌";
+    }
+    else{
+        result.innerHTML = "未查询到相关成绩，请确认姓名是否正确。";
+    }
+}
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="header">
+<h1>2022年决赛成绩查询</h1>
+</div>
+
+<div class="nav">
+<a href="index.html">首页</a>
+<a href="chusai.html">初赛</a>
+<a href="fusai.html">复赛</a>
+<a href="juesai.html">决赛</a>
+<a href="chaxun.html">成绩查询</a>
+</div>
+
+<div class="query-box">
+<p>请输入姓名进行查询：</p>
+<input type="text" id="name">
+<button onclick="searchResult()">查询</button>
+</div>
+
+<div class="result" id="result"></div>
+
+<div class="footer">
+© 2022 景颐市物理竞赛委员会
+</div>
+
+</div>
+</body>
+</html>
